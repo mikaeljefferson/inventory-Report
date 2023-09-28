@@ -1,11 +1,11 @@
 from typing import Dict, Type
-from abc import abstractmethod
+from abc import ABC, abstractmethod
 from inventory_report.product import Product
 import json
 from typing import List
 
 
-class Importer:
+class Importer(ABC):
     def __init__(self, path: str) -> None:
         self.path = path
 
